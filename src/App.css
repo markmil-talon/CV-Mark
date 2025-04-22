@@ -1,0 +1,146 @@
+/* :root - creates variables to be used in styling */
+:root {
+  --background-color: #fff;
+  --btn-color: #0987f2;
+  --btn-text-color: #fff;
+  --project-card-bg: #ffffff00;
+  --text-color: #222;
+  --form-text-color: #555;
+  --footer-text-color: #888;
+}
+
+[data-theme='dark'] {
+  --background-color: #222;
+  --btn-color: #fff;
+  --btn-text-color: #222;
+  --project-card-bg: #fff;
+  --text-color: #fff;
+  --form-text-color: #fff;
+  --footer-text-color: #bbb;
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 60px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3,
+p {
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h2,
+h3 {
+  font-size: 20px;
+}
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.sectionTitle {
+  margin-bottom: 30px;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+section:not(#hero, #footer) {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+#hero {
+  animation: fade-up 1s;
+}
+
+@media (width >= 800px) {
+  #root {
+    gap: 100px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2,
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 60px;
+  }
+}
+
+@media (width >= 1400px) {
+  #root {
+    gap: 200px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 75px;
+  }
+}
