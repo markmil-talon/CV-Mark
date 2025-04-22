@@ -1,4 +1,4 @@
-import { shoes } from '../assets';
+import { shoes, note } from '../assets';
 
 export const projects = [
   {
@@ -7,6 +7,13 @@ export const projects = [
     projLnk: 'https://markmil-talon.github.io/Shoe-Thrift/',
     projH3: 'Shoe-Thrift',
     projP: 'Landing Page',
+  },
+  {
+    projNum: 2,
+    projSrc: note,
+    projLnk: 'https://ntekeep.netlify.app/',
+    projH3: 'Note-Keep',
+    projP: 'Note App Page',
   },
 ];
 

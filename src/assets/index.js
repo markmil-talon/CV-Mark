@@ -10,6 +10,7 @@ import linkedinDark from './linkedin-dark.svg';
 import CV from './CV.pdf';
 
 import shoes from './shoes.png';
+import note from './note.jpg';
 
 export {
   heroImg,
@@ -23,4 +24,5 @@ export {
   linkedinDark,
   CV,
   shoes,
+  note,
 };
