@@ -1,4 +1,4 @@
-import { shoes, note } from '../assets';
+import { shoes, note, koche } from '../assets';
 
 export const projects = [
   {
@@ -14,6 +14,13 @@ export const projects = [
     projLnk: 'https://ntekeep.netlify.app/',
     projH3: 'Note-Keep',
     projP: 'Note App Page',
+  },
+  {
+    projNum: 3,
+    projSrc: koche,
+    projLnk: 'https://koche-mo.vercel.app/',
+    projH3: 'KocheMo',
+    projP: 'Car Shop Page',
   },
 ];
 
