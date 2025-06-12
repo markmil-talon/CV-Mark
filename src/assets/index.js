@@ -13,6 +13,8 @@ import shoes from './shoes.png';
 import note from './note.jpg';
 import koche from './koche.jpg';
 
+// test comment
+
 export {
   heroImg,
   sun,
