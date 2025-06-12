@@ -71,6 +71,15 @@ p {
   margin-bottom: 30px;
 }
 
+.imgContainer {
+  height: 250px;
+  width: 250px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
 .hover {
   cursor: pointer;
 }
