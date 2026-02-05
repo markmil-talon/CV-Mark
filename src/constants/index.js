@@ -31,15 +31,15 @@ export const skills = [
       { name: 'HTML' },
       { name: 'CSS' },
       { name: 'Javascript' },
-      { name: 'Bootstrap' },
-      { name: 'Tailwind CSS' },
+      { name: 'ReactJS' },
+      { name: 'NodeJS' },
     ],
   },
   {
     sklNum: 2,
     sklName: [
-      { name: 'ReactJS' },
-      { name: 'NodeJS' },
+      { name: 'Python' },
+      { name: 'Django' },
       { name: 'MongoDB' },
       { name: 'PostgreSQL' },
       { name: 'MySQL' },
@@ -48,10 +48,10 @@ export const skills = [
   {
     sklNum: 3,
     sklName: [
-      { name: 'PHP' },
-      { name: 'Wordpress' },
+      { name: 'Bootstrap' },
+      { name: 'TailwindCSS' },
       { name: 'Github' },
-      { name: 'Arduino' },
+      { name: 'ShadcnUI' },
     ],
   },
 ];
