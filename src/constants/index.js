@@ -1,4 +1,4 @@
-import { shoes, note, koche } from '../assets';
+import { shoes, note, koche, quickmart } from '../assets';
 
 export const projects = [
   {

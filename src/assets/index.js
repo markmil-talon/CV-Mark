@@ -10,6 +10,7 @@ import CV from './CV.pdf';
 import shoes from './shoes.png';
 import note from './note.jpg';
 import koche from './koche.jpg';
+import quickmart from './quickmart.png';
 
 // test comment
 
@@ -25,4 +26,5 @@ export {
   shoes,
   note,
   koche,
+  quickmart,
 };
