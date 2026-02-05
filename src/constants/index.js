@@ -22,6 +22,13 @@ export const projects = [
     projH3: 'KocheMo',
     projP: 'Car Shop Page',
   },
+  {
+    projNum: 4,
+    projSrc: quickmart,
+    projLnk: 'https://quickmartph.vercel.app/',
+    projH3: 'Quickmart',
+    projP: 'Online grocery',
+  },
 ];
 
 export const skills = [
@@ -50,8 +57,11 @@ export const skills = [
     sklName: [
       { name: 'Bootstrap' },
       { name: 'TailwindCSS' },
-      { name: 'Github' },
       { name: 'ShadcnUI' },
     ],
+  },
+  {
+    sklNum: 4,
+    sklName: [{ name: 'Github' }, { name: 'TanstackQuery' }],
   },
 ];
