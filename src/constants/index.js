@@ -58,12 +58,14 @@ export const skills = [
       { name: 'Bootstrap' },
       { name: 'TailwindCSS' },
       { name: 'ShadcnUI' },
-      { name: 'TanStack Query' },
-      { name: 'Vitest' },
     ],
   },
   {
     sklNum: 4,
-    sklName: [{ name: 'Github' }, { name: 'TanstackQuery' }],
+    sklName: [
+      { name: 'Github' },
+      { name: 'TanstackQuery' },
+      { name: 'Vitest' },
+    ],
   },
 ];
