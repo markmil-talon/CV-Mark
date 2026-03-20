@@ -58,6 +58,8 @@ export const skills = [
       { name: 'Bootstrap' },
       { name: 'TailwindCSS' },
       { name: 'ShadcnUI' },
+      { name: 'TanStack Query' },
+      { name: 'Vitest' },
     ],
   },
   {
