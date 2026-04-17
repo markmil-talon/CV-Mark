@@ -9,7 +9,7 @@ import {
   linkedinDark,
   CV,
 } from '../../assets';
-import TextType from '../../components/animations/texttype';
+import TextType from '../../components/animations/texttype.jsx';
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
