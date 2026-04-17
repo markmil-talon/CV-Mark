@@ -6,9 +6,7 @@ function Footer() {
       id='footer'
       className={styles.container}>
       <div className={styles.exclude}>
-        <p>
-          &copy; 2024 Mark Talon <br /> All rights reserved.
-        </p>
+        <p>© {new Date().getFullYear()} Mark Talon portfolio</p>
       </div>
     </section>
   );

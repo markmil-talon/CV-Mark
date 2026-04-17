@@ -1,23 +1,29 @@
-import { shoes, note, koche, quickmart } from '../assets';
+import {
+  shoethrift,
+  notekeeper,
+  kochemo,
+  quickmart,
+  stocktrack,
+} from '../assets';
 
 export const projects = [
   {
     projNum: 1,
-    projSrc: shoes,
+    projSrc: shoethrift,
     projLnk: 'https://markmil-talon.github.io/Shoe-Thrift/',
     projH3: 'Shoe-Thrift',
     projP: 'Landing Page',
   },
   {
     projNum: 2,
-    projSrc: note,
+    projSrc: notekeeper,
     projLnk: 'https://ntekeep.netlify.app/',
     projH3: 'Note-Keep',
     projP: 'Note App Page',
   },
   {
     projNum: 3,
-    projSrc: koche,
+    projSrc: kochemo,
     projLnk: 'https://koche-mo.vercel.app/',
     projH3: 'KocheMo',
     projP: 'Car Shop Page',
@@ -28,6 +34,13 @@ export const projects = [
     projLnk: 'https://quickmartph.vercel.app/',
     projH3: 'Quickmart',
     projP: 'Online grocery',
+  },
+  {
+    projNum: 5,
+    projSrc: stocktrack,
+    projLnk: 'https://stocktrackph.vercel.app/',
+    projH3: 'StockTrack',
+    projP: 'Stock tracking app',
   },
 ];
 

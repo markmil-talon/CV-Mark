@@ -7,12 +7,11 @@ import linkedinLight from './linkedin-light.svg';
 import linkedinDark from './linkedin-dark.svg';
 import CV from './CV.pdf';
 
-import shoes from './shoes.png';
-import note from './note.jpg';
-import koche from './koche.jpg';
+import shoethrift from './shoethrift.jpeg';
+import notekeeper from './notekeeper.jpeg';
+import kochemo from './kochemo.jpeg';
 import quickmart from './quickmart.png';
-
-// test comment
+import stocktrack from './stocktrack.jpeg';
 
 export {
   heroImg,
@@ -23,8 +22,9 @@ export {
   linkedinLight,
   linkedinDark,
   CV,
-  shoes,
-  note,
-  koche,
+  shoethrift,
+  notekeeper,
+  kochemo,
   quickmart,
+  stocktrack,
 };
