@@ -8,39 +8,54 @@ import {
 
 export const projects = [
   {
-    projNum: 1,
-    projSrc: shoethrift,
-    projLnk: 'https://markmil-talon.github.io/Shoe-Thrift/',
-    projH3: 'Shoe-Thrift',
-    projP: 'Landing Page',
+    id: 1,
+    title: 'ShoeThrift',
+    description:
+      'An e-commerce app that resembles a Nike store, built with React and TailwindCSS.',
+    features: ['Landing Page', 'Product Catalog', 'New UI Experience'],
+    tech: ['React', 'TailwindCSS'],
+    image: shoethrift,
+    live: 'https://markmil-talon.github.io/Shoe-Thrift/',
   },
   {
-    projNum: 2,
-    projSrc: notekeeper,
-    projLnk: 'https://ntekeep.netlify.app/',
-    projH3: 'Note-Keep',
-    projP: 'Note App Page',
+    id: 2,
+    title: 'StockTrack',
+    description:
+      'A stock tracking app with modern design, built using React, TailwindCSS, and Django Python for the backend.',
+    features: ['Dashboard', 'Stock Recording', 'Creates Shopping List'],
+    tech: ['React', 'TailwindCSS', 'Django', 'Python', 'PostgreSQL'],
+    image: stocktrack,
+    live: 'https://stocktrackph.vercel.app/',
+  },
+
+  {
+    id: 3,
+    title: 'QuickMart',
+    description:
+      'An online grocery store with modern design, built using React and TailwindCSS, and NodeJS for backend.',
+    features: ['Single Page App', 'Shopping cart', 'Order tracking'],
+    tech: ['React', 'TailwindCSS', 'NodeJS', 'ExpressJS', 'MongoDB'],
+    image: quickmart,
+    live: 'https://quickmartph.vercel.app/',
   },
   {
-    projNum: 3,
-    projSrc: kochemo,
-    projLnk: 'https://koche-mo.vercel.app/',
-    projH3: 'KocheMo',
-    projP: 'Car Shop Page',
+    id: 4,
+    title: 'KocheMo',
+    description: 'A car shop app built using React and TailwindCSS.',
+    features: ['Single Page App', 'Clean UI', 'Interactive elements'],
+    tech: ['React', 'TailwindCSS'],
+    image: kochemo,
+    live: 'https://koche-mo.vercel.app/',
   },
   {
-    projNum: 4,
-    projSrc: quickmart,
-    projLnk: 'https://quickmartph.vercel.app/',
-    projH3: 'Quickmart',
-    projP: 'Online grocery',
-  },
-  {
-    projNum: 5,
-    projSrc: stocktrack,
-    projLnk: 'https://stocktrackph.vercel.app/',
-    projH3: 'StockTrack',
-    projP: 'Stock tracking app',
+    id: 5,
+    title: 'NoteKeeper',
+    description:
+      'A note-taking app with a clean interface, built using React and TailwindCSS.',
+    features: ['Single Page App', 'UI Update', 'Simple app'],
+    tech: ['React', 'TailwindCSS'],
+    image: notekeeper,
+    live: 'https://ntekeep.netlify.app/',
   },
 ];
 

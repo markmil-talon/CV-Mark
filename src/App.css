@@ -77,26 +77,10 @@ h1 {
   }
 }
 
-section:not(#hero, #footer) {
+section:not(#home, #footer) {
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-
-@keyframes fade-up {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0px) scale(1);
-  }
-}
-
-#hero {
-  animation: fade-up 1s;
+  animation-range: entry 0% cover 30%;
 }
 
 /* @media (width >= 800px) {

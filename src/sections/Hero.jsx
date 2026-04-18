@@ -1,4 +1,4 @@
-import { useTheme } from '../../common/ThemeContext';
+import { useTheme } from '../common/ThemeContext.jsx';
 import {
   heroImg,
   sun,
@@ -8,8 +8,8 @@ import {
   linkedinLight,
   linkedinDark,
   CV,
-} from '../../assets';
-import TextType from '../../components/animations/textType.jsx';
+} from '../assets';
+import TextType from '../components/animations/textType.jsx';
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
@@ -17,10 +17,11 @@ function Hero() {
   const themeIcon = theme === 'light' ? sun : moon;
   const githubIcon = theme === 'light' ? githubLight : githubDark;
   const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
+  const textColor = theme === 'light' ? ['#000000'] : ['#FFFFFF'];
 
   return (
     <section
-      id='hero'
+      id='home'
       className='min-h-[80vh] flex items-center justify-center text-center'>
       <div className='max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center'>
         {/* LEFT */}
@@ -28,28 +29,25 @@ function Hero() {
           <h1 className='text-4xl md:text-6xl font-bold leading-tight'>
             MARK TALON
           </h1>
-          <p className='text-white text-3xl'>
-            <TextType
-              text={[
-                'Software Developer',
-                'Full Stack Engineer',
-                'Tech Enthusiast',
-              ]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              showCursor
-              cursorCharacter='_'
-              texts={[
-                'Welcome to React Bits! Good to see you!',
-                'Build some amazing experiences!',
-              ]}
-              deletingSpeed={50}
-              variableSpeedEnabled={false}
-              variableSpeedMin={60}
-              variableSpeedMax={120}
-              cursorBlinkDuration={0.5}
-            />
-          </p>
+          <TextType
+            className='text-2xl md:text-3xl font-medium text-gray-700 dark:text-gray-300'
+            text={[
+              'Software Developer',
+              'Full Stack Engineer',
+              'Tech Enthusiast',
+            ]}
+            typingSpeed={75}
+            pauseDuration={1500}
+            showCursor
+            cursorCharacter='_'
+            texts={[
+              'Welcome to React Bits! Good to see you!',
+              'Build some amazing experiences!',
+            ]}
+            textColors={textColor}
+            deletingSpeed={50}
+            cursorBlinkDuration={0.5}
+          />
           <p className='text-lg max-w-lg font-light mx-auto'>
             Building scalable web applications using React, Node.js, and Django
             — focused on performance, clean architecture, and modern design
@@ -67,7 +65,7 @@ function Hero() {
             <a
               href={CV}
               download>
-              <button className='font-medium px-6 py-3 border rounded-2xl hover:bg-blue-500 hover:text-white dark:hover:bg-blue-800 dark:text-white dark:hover:text-black transition'>
+              <button className='font-medium px-6 py-3 border rounded-2xl hover:bg-blue-500 hover:text-white dark:hover:bg-blue-800 dark:text-white dark:hover:border-blue-800 transition'>
                 Download CV
               </button>
             </a>
@@ -80,7 +78,7 @@ function Hero() {
               target='_blank'>
               <img
                 src={githubIcon}
-                className='w-6 hover:scale-110 transition'
+                className='w-8 hover:scale-110 transition'
               />
             </a>
             <a
@@ -88,7 +86,7 @@ function Hero() {
               target='_blank'>
               <img
                 src={linkedinIcon}
-                className='w-6 hover:scale-110 transition'
+                className='w-8 hover:scale-110 transition'
               />
             </a>
           </div>
