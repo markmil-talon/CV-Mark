@@ -5,7 +5,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className='sticky top-0 z-50 px-6 py-4 backdrop-blur-md bg-white/60 dark:bg-transparent border-b border-gray-200 dark:border-gray-800 transition '>
+    <header className='sticky top-0 z-50 px-6 py-4 backdrop-blur-md bg-white/60 dark:bg-transparent border-b border-gray-200 dark:border-stone-700 transition '>
       <div className='max-w-6xl mx-auto flex items-center justify-between'>
         {/* LOGO */}
         <p className='font-medium text-lg tracking-tight'>Mark's Portfolio</p>

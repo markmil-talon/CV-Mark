@@ -5,7 +5,7 @@ import githubLight from './github-light.svg';
 import githubDark from './github-dark.svg';
 import linkedinLight from './linkedin-light.svg';
 import linkedinDark from './linkedin-dark.svg';
-import CV from './CV.pdf';
+import CV from './Mark_Talon_resume.pdf';
 
 import shoethrift from './shoethrift.jpeg';
 import notekeeper from './notekeeper.jpeg';

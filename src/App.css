@@ -23,8 +23,6 @@
 
 body {
   background-color: var(--background-color);
-  display: flex;
-  justify-content: center;
 }
 
 html {
@@ -49,23 +47,6 @@ h1 {
   font-family: 'Rubik', sans-serif;
 }
 
-.sectionTitle {
-  margin-bottom: 30px;
-}
-
-.imgContainer {
-  height: 250px;
-  width: 250px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  border-radius: 20px;
-}
-
-.hover {
-  cursor: pointer;
-}
-
 @keyframes appear {
   from {
     opacity: 0;
@@ -80,42 +61,24 @@ h1 {
 section:not(#home, #footer) {
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 30%;
+  animation-range: entry 0% cover 20%;
 }
 
-/* @media (width >= 800px) {
-  #root {
-    gap: 100px;
+/* marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
   }
-
-  h1 {
-    font-size: 40px;
-  }
-
-  h2,
-  h3 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 20px;
-  }
-
-  .sectionTitle {
-    margin-bottom: 60px;
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-@media (width >= 1400px) {
-  #root {
-    gap: 200px;
-  }
+.marquee {
+  animation: marquee linear infinite;
+}
 
-  h1 {
-    font-size: 48px;
-  }
-
-  .sectionTitle {
-    margin-bottom: 75px;
-  }
-} */
+/* pause on hover */
+.marquee:hover {
+  animation-play-state: paused;
+}
