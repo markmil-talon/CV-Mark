@@ -1,6 +1,9 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { SlCheck } from 'react-icons/sl';
+import { GoMail } from 'react-icons/go';
+import { BsTelephone } from 'react-icons/bs';
+import { IoHome } from 'react-icons/io5';
 
 const container = {
   hidden: {},
@@ -37,16 +40,18 @@ function Contact() {
   return (
     <section
       id='contact'
-      className='py-24 px-6'>
-      <div className='max-w-2xl mx-auto'>
+      className='py-24 px-6'
+    >
+      <div className='max-w-4xl mx-auto'>
         {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className='text-center mb-10'>
-          <h1 className='text-3xl md:text-4xl'>Contact</h1>
+          className='text-center mb-10'
+        >
+          <h1 className='text-3xl md:text-4xl'>Get in Touch</h1>
           <p className='mt-3 text-gray-600 dark:text-gray-400 text-sm'>
             Have a project in mind or just want to connect? Feel free to reach
             out.
@@ -56,58 +61,104 @@ function Contact() {
         <AnimatePresence mode='wait'>
           {/* FORM */}
           {status !== 'success' && (
-            <motion.form
-              key='form'
-              onSubmit={handleSubmit}
-              variants={container}
-              initial='hidden'
-              whileInView='show'
-              viewport={{ once: true }}
-              className='space-y-6'>
-              {/* NAME */}
-              <motion.div variants={item}>
-                <input
-                  type='text'
-                  name='name'
-                  placeholder='Name'
-                  required
-                  className='w-full px-4 py-3 rounded-xl border border-gray-400 dark:border-gray-700 bg-white dark:bg-[#222] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition'
-                />
+            <div className='flex flex-col md:flex-row justify-between space-y-5'>
+              <motion.div
+                variants={container}
+                initial='hidden'
+                whileInView='show'
+                viewport={{ once: true }}
+                className='space-y-6 md:w-[40%]'
+              >
+                <motion.h1
+                  variants={item}
+                  className='text-2xl'
+                >
+                  Contact Info:
+                </motion.h1>
+                <motion.div
+                  variants={item}
+                  className='flex flex-row'
+                >
+                  <div className='text-black dark:text-white text-2xl mr-4'>
+                    <GoMail />
+                  </div>
+                  <p>markmilranitalon@gmail.com</p>
+                </motion.div>
+                <motion.div
+                  variants={item}
+                  className='flex flex-row'
+                >
+                  <div className='text-black dark:text-white text-2xl mr-4'>
+                    <BsTelephone />
+                  </div>
+                  <p>09613445732</p>
+                </motion.div>
+                <motion.div
+                  variants={item}
+                  className='flex flex-row'
+                >
+                  <div className='text-black dark:text-white text-2xl mr-4'>
+                    <IoHome />
+                  </div>
+                  <p>Magalang, Pampanga</p>
+                </motion.div>
               </motion.div>
 
-              {/* EMAIL */}
-              <motion.div variants={item}>
-                <input
-                  type='email'
-                  name='email'
-                  placeholder='Email'
-                  required
-                  className='w-full px-4 py-3 rounded-xl border border-gray-400 dark:border-gray-700 bg-white dark:bg-[#222] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition'
-                />
-              </motion.div>
+              <motion.form
+                key='form'
+                onSubmit={handleSubmit}
+                variants={container}
+                initial='hidden'
+                whileInView='show'
+                viewport={{ once: true }}
+                className='space-y-6 w-full md:w-[60%]'
+              >
+                {/* NAME */}
+                <motion.div variants={item}>
+                  <input
+                    type='text'
+                    name='name'
+                    placeholder='Name'
+                    required
+                    className='w-full px-4 py-3 rounded-xl border border-gray-400 dark:border-gray-700 bg-white dark:bg-[#222] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition'
+                  />
+                </motion.div>
 
-              {/* MESSAGE */}
-              <motion.div variants={item}>
-                <textarea
-                  name='message'
-                  rows='5'
-                  placeholder='Message'
-                  required
-                  className='w-full px-4 py-3 rounded-xl border border-gray-400 dark:border-gray-700 bg-white dark:bg-[#222] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition resize-none'
-                />
-              </motion.div>
+                {/* EMAIL */}
+                <motion.div variants={item}>
+                  <input
+                    type='email'
+                    name='email'
+                    placeholder='Email'
+                    required
+                    className='w-full px-4 py-3 rounded-xl border border-gray-400 dark:border-gray-700 bg-white dark:bg-[#222] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition'
+                  />
+                </motion.div>
 
-              {/* BUTTON */}
-              <motion.button
-                variants={item}
-                type='submit'
-                disabled={status === 'loading'}
-                whileTap={{ scale: 0.97 }}
-                whileHover={{ scale: 1.02 }}
-                className='w-full sm:w-auto px-6 py-3 rounded-xl bg-black text-white dark:bg-white dark:text-black font-medium hover:opacity-90 transition'>
-                {status === 'loading' ? 'Sending...' : 'Send Message'}
-              </motion.button>
-            </motion.form>
+                {/* MESSAGE */}
+                <motion.div variants={item}>
+                  <textarea
+                    name='message'
+                    rows='5'
+                    placeholder='Message'
+                    required
+                    className='w-full px-4 py-3 rounded-xl border border-gray-400 dark:border-gray-700 bg-white dark:bg-[#222] text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition resize-none'
+                  />
+                </motion.div>
+
+                {/* BUTTON */}
+                <motion.button
+                  variants={item}
+                  type='submit'
+                  disabled={status === 'loading'}
+                  whileTap={{ scale: 0.97 }}
+                  whileHover={{ scale: 1.02 }}
+                  className='w-full sm:w-auto px-6 py-3 rounded-xl bg-black text-white dark:bg-white dark:text-black font-medium hover:opacity-90 transition'
+                >
+                  {status === 'loading' ? 'Sending...' : 'Send Message'}
+                </motion.button>
+              </motion.form>
+            </div>
           )}
 
           {/* SUCCESS STATE */}
@@ -118,12 +169,14 @@ function Contact() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className='text-center py-10'>
+              className='text-center py-10'
+            >
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: 'spring', stiffness: 200, damping: 12 }}
-                className='flex justify-center text-4xl mb-4 text-center dark:text-white'>
+                className='flex justify-center text-4xl mb-4 text-center dark:text-white'
+              >
                 <SlCheck />
               </motion.div>
 
