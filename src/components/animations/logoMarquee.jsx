@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
-function LogoMarquee({ logos, speed = 30, className = '' }) {
-  const loopLogos = useMemo(() => [...logos, ...logos], [logos]);
+function LogoMarquee({ techSkills, iconMap, speed = 30, className = '' }) {
+  const loopLogos = useMemo(() => [...techSkills, ...techSkills], [techSkills]);
 
   return (
     <div className={`relative w-full max-w-full overflow-hidden ${className}`}>
@@ -16,19 +16,23 @@ function LogoMarquee({ logos, speed = 30, className = '' }) {
           animationDuration: `${speed}s`,
         }}
       >
-        {loopLogos.map((logo, i) => (
-          <a
-            key={i}
-            href={logo.href}
-            target='_blank'
-            rel='noreferrer'
-            className='flex items-center opacity-80 hover:opacity-100 transition'
-          >
-            <div className='h-8 md:h-10 lg:h-12 flex items-center text-gray-700 dark:text-gray-400'>
-              {logo.node}
-            </div>
-          </a>
-        ))}
+        {loopLogos.map((logo, i) => {
+          const Icon = iconMap[logo.icon];
+
+          return (
+            <a
+              key={i}
+              href={logo.href}
+              target='_blank'
+              rel='noreferrer'
+              className='flex items-center opacity-80 hover:opacity-100 transition'
+            >
+              <div className='h-8 md:h-10 lg:h-12 flex items-center text-gray-700 dark:text-gray-400'>
+                <Icon size={30} />
+              </div>
+            </a>
+          );
+        })}
       </div>
     </div>
   );

@@ -131,8 +131,29 @@ export const skills = [
       { name: 'PostgreSQL' },
       { name: 'MySQL' },
       { name: 'Github' },
-
       { name: 'Vitest' },
+      { name: 'Postman' },
     ],
   },
+];
+
+export const techSkills = [
+  { icon: 'react', title: 'React', href: 'https://react.dev' },
+  { icon: 'tailwind', title: 'Tailwind CSS', href: 'https://tailwindcss.com' },
+  { icon: 'bootstrap', title: 'Bootstrap', href: 'https://getbootstrap.com/' },
+  { icon: 'shadcn', title: 'Shadcn UI', href: 'https://ui.shadcn.com/' },
+  { icon: 'django', title: 'Django', href: 'https://www.djangoproject.com/' },
+  {
+    icon: 'javascript',
+    title: 'Javascript',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+  },
+  { icon: 'express', title: 'ExpressJS', href: 'https://expressjs.com/' },
+  { icon: 'mongodb', title: 'MongoDB', href: 'https://www.mongodb.com/' },
+  {
+    icon: 'postgresql',
+    title: 'PostgreSQL',
+    href: 'https://www.postgresql.org/',
+  },
+  { icon: 'github', title: 'Github', href: 'https://github.com/' },
 ];
